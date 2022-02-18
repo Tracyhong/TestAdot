@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Geogrotesque-SemiBold;
+    src: url(utils/geogrotesque-semibold.otf);
+}
+body{
+    text-transform: uppercase;
+    font-family: Geogrotesque-SemiBold;
+    color: rgb(255,255,255);
+    background-color: rgb(0,0,0);
+    background-image: linear-gradient(to right, rgb(11,11,31) , rgb(16,6,18));
+    /*center everything*/
+    margin: auto;
+    text-align: center;
+}
+
+/* HEADER LOGO */
+.logoPuma{
+    width: 25%;
+    margin: 1em auto;
+}
+/* VIDEO */
+/*100%width , disappear*/
+#video{
+    display: block;
+}
+#video>video{
+    width: 100%;
+    height: auto;
+    margin: 1em auto;
+}
+.endVideo{
+    animation: endVideo 1s forwards;
+}
+.hideVideo{
+    display: none;
+    transition-delay: 1.5s ;
+    transition-property: display;
+}
+@keyframes endVideo {
+    100%{
+        opacity: 0;
+        transform: scale(0,0);
+    }
+}
+/*Container*/
+.container{
+    margin: 2em auto 5em auto;
+}
+/* OFFRE */
+.offre{
+    display: flex;
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#deo{
+    flex-grow: 1;
+    width: 15%;
+    height: 100%;
+    padding: 0 0.5em ;
+}
+#offre{
+    flex-grow: 2;
+    width: 40%;
+    height: 40%;
+    padding:0 0.5em;
+    cursor: pointer;
+}
+#offre:hover{
+    transform:  scale(0.9,0.9);
+}
+
+
+/* ADRESSE */
+.adresse{
+    width: 100%;
+    height: auto;
+    margin: 4em auto;
+}
+.adresse>h4{
+    font-size: 5vw;
+}
+.adresse>h5{
+    font-size: 4vw;
+}
+/* MAP */
+#map{
+    margin: 1em auto;
+    width: 50%;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+/* FOOTER BOTTOM */
+.footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+
+    z-index: 10; /*tout devant*/
+}
+.upIcon{
+    width: 10vw;
+    margin: auto;
+    animation: upIcon 2s infinite ease-in-out;
+}
+@keyframes upIcon {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(0,20%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.bottom{
+    border-radius: 100% 100% 0 0;
+    height: 10%;
+    background-image: url("img/RECTANGLE_COLOR.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom>h1{
+    margin: 0;
+    color: rgb(0,0,0);
+    font-size: 7vw;
+}
+.bottom:hover{
+    transform: scale(1.05);
+}

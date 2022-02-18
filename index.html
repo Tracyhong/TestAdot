@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta viewport for the size/visible area of the page on a device-->
+    <!--width of the page = width of the device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--for the map-->
+<!--
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+-->
+
+    <title>Puma</title>
+
+</head>
+<body>
+    <header>
+        <img class="logoPuma" src="img/LOGO.svg" alt="logoPUMAfragrance">
+    </header>
+    <div id="video">
+        <!--video disappear when it's finished not working ?-->
+        <video controls autoplay>
+            <source src="utils/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="offre">
+            <!--img deo + offre -40% block-->
+            <img id="deo" src="img/DEO.svg" alt="Déodorant PUMA">
+            <img id="offre" src="img/OFFRE.png" alt="Offre -40%" >
+        </div>
+        <div class="adresse">
+            <!--centered text-->
+            <h4>retrouve ton déodorant chez</h4>
+            <h5>GEANT 49 ANGERS ANJOU <br> 1 RUE DU GRAND MONTREJEAU - CC A <br> 49000 ANGERS</h5>
+        </div>
+        <div id="map">
+            <!--use API-->
+        </div>
+    </div>
+    <footer class="footer">
+        <!--position fixed-->
+        <img class="upIcon" src="img/up.png" alt="icon up">
+        <div class="bottom">
+            <h1>j'y vais</h1>
+        </div>
+    </footer>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfINdBzgbfX09jGy7QxtoZELgIROgFIwQ&callback=initMap&libraries=&v=weekly"
+            async
+    ></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
